@@ -1,30 +1,30 @@
-Role Name
+Apachesetup
 =========
 apache
 Setting httpd webservers such that it should be used by the load balancer 
 Requirements
 ------------
 
-Pre-requistic - before running the role you have 
+Pre-requistic - before running the role you have to create the .yml file and import the role as well as hosts, if you are using group name in host then first create it, in inventory file
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+No variables are used 
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+This role can be used as a setup of apache webserver, and also can be used for the purpose of load balancer- for this you have to install role loadbalancer
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: myservers
       roles:
-         - { role: username.rolename, x: 42 }
+         - role: "apache"
 
 License
 -------
@@ -34,4 +34,5 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+For Any Queries contact me on limkedIn:
+https://www.linkedin.com/in/gautam-khatri-8891b3127/
