@@ -1,17 +1,22 @@
 ---
 # tasks file for apache
-- package:
+- name: "Installing httpd software"
+  package:
      name: "httpd"
      state: present
-- package: 
+- name: "Installing php software for php files"
+  package: 
      name: "php"
-- copy:
+- name: "copying php file to document root"     
+  copy:
      src: "g.php"
      dest: "/var/www/html/index.php"
-- service: 
+- name: "starting services"
+  service: 
      name: "httpd"
-     state: started 
-- firewalld:
+     state: started
+- name: "updating firewall rules for httpd"
+  firewalld:
         port: 80/tcp
         immediate: yes
         permanent: yes
