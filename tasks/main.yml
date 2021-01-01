@@ -1,0 +1,19 @@
+---
+# tasks file for apache
+- package:
+     name: "httpd"
+     state: present
+- package: 
+     name: "php"
+- copy:
+     src: "g.php"
+     dest: "/var/www/html/index.php"
+- service: 
+     name: "httpd"
+     state: started 
+- firewalld:
+        port: 80/tcp
+        immediate: yes
+        permanent: yes
+        state: enabled
+
