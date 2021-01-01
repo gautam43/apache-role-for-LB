@@ -1,12 +1,11 @@
 Role Name
 =========
-
-A brief description of the role goes here.
-
+apache
+Setting httpd webservers such that it should be used by the load balancer 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Pre-requistic - before running the role you have 
 
 Role Variables
 --------------
